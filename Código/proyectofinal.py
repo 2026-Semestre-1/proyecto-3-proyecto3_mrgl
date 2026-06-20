@@ -11,19 +11,54 @@ restricciones:
 
 
 class País:
-    def __init__(self):
-        self.codigo_fifa=""
-        self.nombre=""
-        self.continente=""
-        self.ranking_fifa=0
-    def registrarP(self,):
-
-        pai="paises.txt"
-        archivo=open(pai,"a")
-        contenido=
-
-
-
+    def __init__(self,codigofifa,nombres,continentes,ranking_fifa):
+        self.codigo_fifa=codigofifa
+        self.nombre=nombres
+        self.continente=continentes
+        self.ranking_fifas=ranking_fifa
+    def mostrar_datos(self):
+        codigo=self.codigo_fifa
+        nombre=self.nombre
+        continente=self.continente
+        ranking=self.ranking_fifas
+        print(f"""              
+              Código del país:{codigo}
+               Nombre del país:{nombre}
+               Continente:{continente}
+               Ranking de la FIFA:{ranking}
+""")
+    def actualizar_datos(self):
+        joshua=joshua#Falta Terminarlo, hay que hacer los constructores y las clases primero
+class Persona:
+    def __init__(self,nombre,apellido,fecha_nacimiento,nacionalidad):
+        self.nombre=nombre
+        self.apellido=apellido
+        self.fecha_nacimiento=fecha_nacimiento
+        self.nacionalidad=nacionalidad
+        if not isinstance(nombre,str):
+            return "Error:el nombre tiene que ser en formato de letras"
+        elif not isinstance(apellido,str):
+            return "Error:El apellido tiene que ser en formato de letras"
+        elif not isinstance(fecha_nacimiento,str):
+            return "Error:La fecha de nacimiento debe de ser en formato de letras"
+        elif not isinstance(nacionalidad,str):
+            return "Error:La nacionalidad debe de ser de formato de letras"
+        
+    def mostrar(self):
+        print(f"""
+Nombre de la persona:{self.nombre}
+Apellido de la persona:{self.apellido}
+nacionalidad:{self.nacionalidad}
+Fecha de nacimiento:{self.fecha_nacimiento}
+""")
+class Entrenador(Persona):
+    def __init__(self, licencia,experiencia_años,sistemadejuego):
+        self.licencia=licencia
+        self.experiencia_años=experiencia_años
+        self.sistemadejuego=sistemadejuego
+        if not isinstance(licencia,str):
+            return "Error:debe de ser de formato de letras"
+       
 
 
 
